@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css/style.css">
     <title>My First Django App</title>
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'app_one/style.css' %}">
 </head>
 <body>
-    <h1>This is Lerah Caones' first app</h1>
+    <h1>Good Day! How are you feeling today?</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <label for="color">Pick a random color:</label>
+        <select id="color" name="color" required>
+            <option value="" disabled selected>--Choose a color--</option>
+            {% for name, value in colors.items %}
+                <option value="{{ value }}">{{ name }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if quote %}
+        <div class="quote-box" style="color: {{ color }}">
+            <h2>{{ quote }}</h2>
+        </div>
+    {% endif %}
 </body>
 </html>

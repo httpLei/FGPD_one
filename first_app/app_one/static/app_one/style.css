@@ -1,0 +1,40 @@
+body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: darkblue;
+}
+
+form {
+    margin: 20px 0;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: navy;
+}
+
+.quote-box {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+select {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    margin-left: 10px;
+}
